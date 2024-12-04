@@ -1,0 +1,65 @@
+/* Make sure the container takes full height of the viewport */
+.orders-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ensure the component fills the height */
+    padding: 2rem;
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+  
+  .orders-card {
+    flex: 1; /* Ensure the card takes available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #ffffff 30%, #f3f3f3 100%);
+    border-radius: 16px;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .card-content {
+    flex: 1; /* Allow content to grow and fill space */
+    overflow-y: auto; /* Enable scrolling if content exceeds card height */
+  }
+  
+  .card-header {
+    padding-bottom: 1rem;
+  }
+  
+  .card-footer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .select-box {
+    min-width: 150px;
+  }
+  
+  .refresh-btn {
+    color: #1976d2;
+  }
+  
+  .table-container {
+    overflow-x: auto; /* Add horizontal scrolling if needed */
+  }
+  
+  .table {
+    width: 100%;
+    table-layout: fixed; /* Ensures all columns are aligned evenly */
+    border-spacing: 0;
+  }
+  
+  .table-cell {
+    padding: 8px;
+  }
+  
+  .table-header {
+    background-color: #f7f7f7;
+    font-weight: bold;
+  }
+  

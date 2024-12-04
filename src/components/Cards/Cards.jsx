@@ -1,0 +1,33 @@
+import React from "react";
+import Card from "../Card/Card";
+import "./Cards.css";
+
+const Cards = ({ cardsData, setMonth, setYear }) => {
+  const handleCardClick = (newMonth, newYear) => {
+    setMonth(newMonth);
+    setYear(newYear);
+  };
+
+  return (
+    <div className="Cards">
+      {cardsData.map((card, id) => (
+        <div
+          className="parentContainer"
+          key={id}
+          onClick={() => handleCardClick(new Date().getMonth() + 1, new Date().getFullYear())} // Example action
+        >
+          <Card
+            title={card.title}
+            color={card.color}
+            barValue={card.barValue}
+            value={card.value}
+            png={card.png}
+            series={card.series}
+          />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Cards;
